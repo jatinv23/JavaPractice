@@ -17,23 +17,23 @@ public class MergeSortedArrays {
         }
     }
 
-    private static int[] mergeSortedArrays(int[] a, int[] b) {
-        int[] c = new int[a.length + b.length];
+    private static int[] mergeSortedArrays(int[] arr1, int[] arr2) {
+        int[] mergedArray = new int[arr1.length + arr2.length];
         int i = 0,j = 0,k = 0;
-        while(i < a.length && j < b.length){
-            if (a[i]<b[j]){
-                c[k++] = a[i++];
+        while(i < arr1.length && j < arr2.length){
+            if (arr1[i]<arr2[j]){
+                mergedArray[k++] = arr1[i++];
             }else {
-                c[k++] = b[j++];
+                mergedArray[k++] = arr2[j++];
             }
         }
-        while(i<a.length){
-            c[k++]=a[i++];
+        while(i<arr1.length){
+            mergedArray[k++]=arr1[i++];
         }
-        while(j<b.length){
-            c[k++]=b[j++];
+        while(j<arr2.length){
+            mergedArray[k++]=arr2[j++];
         }
-        return c;
+        return mergedArray;
     }
 
     private static int[] mergeSortedArray(int[] arr1, int[] arr2) {

@@ -8,7 +8,7 @@ public class StartPyramid {
     }
 
     private static void printPyramid(int n) {
-        //
+
         for(int i=1;i<=n;i++){
             //Print leading spaces
             for (int j=i;j<n;j++){
